@@ -10,7 +10,11 @@ export class ButtonComponent implements OnInit {
   @Input() text: string;
   @Input() color: string;
   
-  constructor(){}
+  constructor(){
+    // need to define default values in case no input is passed
+    this.text = "[UNTITLED]";
+    this.color = "#000000";
+  }
     
     ngOnInit(): void {}
 }

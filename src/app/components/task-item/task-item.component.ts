@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Task} from '../../Task'
+import {Task} from '../../interfaces/task'
 
 @Component({
   selector: 'app-task-item',
@@ -8,12 +8,17 @@ import {Task} from '../../Task'
 })
 export class TaskItemComponent implements OnInit {
   
-  @Input() task: Task; // Stuck here
+  @Input() task!: Task; // Girlie I told you to just use the explanation point!
 
   constructor() {
+    // You could also use an initializer for your interface if the explanation point is making you nervous
+    // this.task = {
+    //   id: undefined,
+    //   text: '',
+    //   day: '',
+    //   reminder: false
+    // };
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
 }

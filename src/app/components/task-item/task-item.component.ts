@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Task } from 'src/app/interfaces/task';
 import { TASKS } from 'src/app/mocks/mock-tasks';
 
 @Component({
@@ -8,7 +9,7 @@ import { TASKS } from 'src/app/mocks/mock-tasks';
 })
 export class TaskItemComponent implements OnInit {
   
-  @Input() task!: typeof TASKS; // Girlie I told you to just use the explanation point!
+  @Input() task!: Task; // Girlie I told you to just use the explanation point!
 
   constructor() {
     // You could also use an initializer for your interface if the explanation point is making you nervous

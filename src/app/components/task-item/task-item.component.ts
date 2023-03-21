@@ -12,19 +12,18 @@ export class TaskItemComponent implements OnInit {
   
   @Input() task!: Task; // Girlie I told you to just use the explanation point!
   faTimes = faTimes;
-  constructor() {
+  constructor() {}
     // You could also use an initializer for your interface if the explanation point is making you nervous
     // this.task = {
     //   id: undefined,
     //   text: '',
     //   day: '',
     //   reminder: false
-    // };
+    // }
 
-  }
+  ngOnInit(): void {}
 
-  ngOnInit(): void { }
-  OnDelete(task){
+  onDelete(task){
     console.log(task);
   }
 }
